@@ -13,6 +13,12 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
   console.log("Connected")
+
+  // -----receive data from client ---------//
+
+  socket.on("chat", (data) => {
+    console.log(data)
+  })
 })
 
 expressServer.listen(3000, () => {
