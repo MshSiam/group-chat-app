@@ -17,7 +17,8 @@ io.on("connection", (socket) => {
   // -----receive data from client ---------//
 
   socket.on("chat", (data) => {
-    console.log(data)
+    // console.log(data)
+    io.emit("chatShow", data)
   })
 })
 
